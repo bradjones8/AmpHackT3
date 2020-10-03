@@ -10,6 +10,7 @@ mongoose.connection.on('connected', () => {
 });
 const Schema =  mongoose.Schema;
 const userSchema = new Schema({
+    id: Number,
     name: {
         first: String,
         last: String
