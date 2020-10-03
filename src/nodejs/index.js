@@ -22,6 +22,7 @@ const userSchema = new Schema({
 const User = mongoose.model('User', userSchema);
 
 const data = {
+    id: 1,
     name: {
         first: 'John',
         last: 'Doe'
