@@ -134,6 +134,46 @@ app.get('/makepost', (req, res) => {
 
 });
 
+app.get('/guestgetpost', (req, res) => {
+    //prints all post json data to response
+    Post.find({})
+        .then((ourdata) => {
+            console.log('Data: ', ourdata);
+             res.json(ourdata);
+        })
+        .catch((error) => {
+            console.log('error: ', error);
+        });
+
+});
+
+
+ app.get('/addresponse', (req, res) =>  {
+
+
+    const targetPostId = 1;
+    const targetPostResponse = 'Yes, this is something I can assist you with.';
+    const helperId = 1;
+    const helperName = {
+        first: 'Patrick',
+        last: 'Goldberg'
+    };
+
+
+
+     Post.updateOne({ postId: targetPostId }, { aidName: helperName, aidId: helperId, postResponse: targetPostResponse }, function (
+         err,
+         result
+     ) {
+         if (err) {
+             res.send(err);
+         } else {
+             res.json(result);
+         }
+     });
+
+});
+
 
 
 // Handles any requests that don't match the ones above
