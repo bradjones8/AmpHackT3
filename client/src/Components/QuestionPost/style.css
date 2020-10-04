@@ -1,0 +1,26 @@
+.question-posting-container {
+    background-color: #343434;
+    border-radius: 2%;
+    width: 80vw;
+    height: 60vh;
+    position: absolute;
+    top: 20vh;
+    left: 10vw;
+
+}
+
+.question-posting-form {
+    width: 60vw;
+    height: 50vh;
+    margin: auto;
+    margin-top: 5vh;
+    margin-bottom: 5vh;
+}
+
+.question-posting-form label {
+    color: white;
+}
+
+.question-posting-button {
+    width: 100%;
+}
